@@ -7,4 +7,8 @@ describe('removeAllVowels Filter', function () {
 		$filter = $injector.get('$filter');
 	}));
 
+  it('should remove all vowels from string', function() {
+    var results = $filter('removeAllVowels')('california');
+    expect(results).toEqual('clfrn');
+  });
 });
